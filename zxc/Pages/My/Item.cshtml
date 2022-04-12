@@ -1,0 +1,60 @@
+﻿@page "{id}"
+@model zxc.Pages.My.ItemModel
+@{
+
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/my.css" />
+    
+</head>
+<body class="back">
+    <h1 class="title">@Model.getId()</h1>
+    <div>
+        <center><img class="im-item" src="~/img/@Model.ImageName"></center>
+    </div>
+    <p class="height-50"></p>
+    <p align="center" class="darkRedTextSile">@Model.getDescriptionFromDataBase()</p>
+    <p class="darkRedTextSile">@Model.IsRaited</p>
+    <p class="darkRedTextSile">
+        Score: @Model.GetScore() <br />
+        Count of rates: @Model.GetCountOfRates()
+    </p>
+    <div class="star-box">
+        <div class="star-container">
+            <a class=@Model.TagName[0] name="Score" asp-page="Item" asp-page-handler="SetRaiting" asp-route-rate="1" asp-route-id=@Model.getId()>&#x2605;</a>
+            <div class="star-container">
+                <a class=@Model.TagName[1] name="Score" asp-page="Item" asp-page-handler="SetRaiting" asp-route-rate="2" asp-route-id=@Model.getId()>&#x2605;</a>
+                <div class="star-container">
+                    <a class=@Model.TagName[2] name="Score" asp-page="Item" asp-page-handler="SetRaiting" asp-route-rate="3" asp-route-id=@Model.getId()>&#x2605;</a>
+                    <div class="star-container">
+                        <a class=@Model.TagName[3] name="Score" asp-page="Item" asp-page-handler="SetRaiting" asp-route-rate="4" asp-route-id=@Model.getId()>&#x2605;</a>
+                        <div class="star-container"><a class=@Model.TagName[4] name="Score" asp-page="Item" asp-page-handler="SetRaiting" asp-route-rate="5" asp-route-id=@Model.getId()>&#x2605;</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p class="height-50"></p>
+
+    @{
+        foreach (var i in @Model.getDescriptionFromDataBase())
+        {
+            <p class="darkRedTextSile">@i</p>
+        }
+    }
+    <form method="post">
+        <h3 class="darkRedTextSile">Enter Your Comment:</h3>    
+        
+        <textarea asp-for="Comment" cols="40" rows="5"></textarea>
+        <input type="submit" asp-page-handler="GetUserComment" class="darkRedTextSile" value="Send" />
+    </form>
+
+</body>
+</html>
+

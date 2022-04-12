@@ -1,0 +1,34 @@
+﻿@page
+@using Microsoft.Web.Helpers;
+@model zxc.Pages.My.AddModel
+@{
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/my.css" />
+</head>
+<body class="back">
+    <h1 class="title">Add item in database</h1>
+    <div class="">
+        <p class="darkRedTextSile">Enter name of item</p>
+    </div>
+    <div class="height-50">
+
+        
+        <form asp-action="AdditionItem" method="post" enctype="multipart/form-data">
+            <input type="text" name="name" class="darkRedTextSile" />
+            <p class="darkRedTextSile">Enter image of item</p>
+            <input type="file" name="img" accept=".jpg, .jpeg, .png" multiple />
+            <p class="height-25 darkRedTextSile">Enter Description</p>
+            <textarea type="text" name="about" class="height-50 darkRedTextSile text-description"></textarea>
+            <p class="height-25"></p>
+            <input class="darkRedTextSile" type="submit" asp-page-handler="AdditionItem" value="Send" />
+        </form>
+        
+    </div>
+</body>
+</html>
+
+

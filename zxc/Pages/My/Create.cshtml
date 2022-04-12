@@ -1,0 +1,30 @@
+﻿@page
+@model zxc.Pages.My.MusicModel
+@{
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewData["Title"] - zxc</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="~/css/my.css" />
+</head>
+
+
+<body class="back">
+
+    <h1 class="title"></h1>
+    <form method="post">
+        <input type="text" name="name" />
+        <input type="submit" value="Add" asp-page-handler="CreateTable" />
+    </form>
+    <p class="height-25"></p>
+    <form method="post">
+        <input type="submit" value="Copy" class="darkRedTextSile" asp-page-handler="CopyFromTo"/>
+    </form>
+</body>
+</html>
+
+
+

@@ -1,0 +1,51 @@
+﻿@page "{id}"
+@model zxc.Pages.My.JapaneseModel
+
+<!DOCTYPE html>
+<globalization culture="ja-JP"
+               uiCulture="ja-JP" />
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="~/css/my.css" />
+</head>
+
+
+<body class="back">
+
+    <h1>@Model.name</h1>
+
+    <span class="big_box1">
+        @{
+            //   Model.TEMP();
+            List<string> listOfImagesLinksFromDB = Model.getFilesNameWithArticleFromDirectory();
+            List<string> Names = Model.getFilesNameFromDirectory();
+
+
+            for (int i = 0; i < @listOfImagesLinksFromDB.Count; ++i)
+            {
+                <span class="box">
+                  <a href="/My/Item/@listOfImagesLinksFromDB[i]"><img class="im" src="~/img/@listOfImagesLinksFromDB[i]"/></a>
+                  <div class="max-width">
+                      <p class="align-bottom-center darkRedTextSile">@Names[i]</p>
+                  </div>
+                 </span>
+              
+            }
+        }
+    </span>
+    <div class="big_box1">
+        <p class="height-50"></p>
+        <p class="height-50"></p>
+        <p class="title">@Model.randomJapaneseText(10)</p>
+        <p class="title">@Model.name</p>
+
+        <p class="darkRedTextSile">@Model.randomJapaneseText(1000)</p>
+
+        <a href="/My/ToGo"> <input class="darkRedTextSile" id="Button1" type="button" value="ToGo" /></a>
+
+        <output>Something2</output>
+    </div>
+    </body>
+</html>
+

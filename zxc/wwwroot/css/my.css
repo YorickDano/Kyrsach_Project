@@ -1,0 +1,202 @@
+﻿html {
+}
+
+nav {
+    border: none;
+}
+
+div {
+    border: none;
+}
+
+footer {
+}
+
+body {
+    color: white;
+}
+.atCenter {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.divRight {
+    float: right;
+}
+
+.divLeft {
+    float: left;
+}
+.title {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 110%;
+    color: rgb(200,0,0);
+    text-align: center;
+}
+.star-box {
+    display: inline-block;
+    border: 2px solid rgb(65,65,65);
+}
+
+.star-container {
+    display: inline-block;
+}
+
+.star {
+    text-decoration: none;
+    color: #BBB;
+    font-size: 3em;
+    font-weight: 900;
+    transition: color .25s linear;
+}
+
+.colored-star {
+    text-decoration: none;
+    color: rgb(200,0,0);
+    font-size: 3em;
+    font-weight: 900;
+    transition: color .25s linear;
+}
+
+.star-container:hover > .star {
+    color: rgb(200,0,0);
+}
+
+
+.raiting {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 110%;
+    color: black;
+    border: 2px solid white;
+    transition: all .3s ease-out;
+}
+    .raiting:hover {
+        border: 0;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 110%;
+        color: rgb(200,0,0);
+    }
+
+.darkRedTextSile {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 110%;
+    color: rgb(200,0,0);
+}
+
+.big_box1 {
+    display: block;
+    width: auto;
+    border: 10px solid rgba(0,0,0,0);
+}
+
+.big_box2 {
+    display: block;
+    height: 30px;
+    top: 40px;
+}
+
+.box {
+    float: left;
+    border: 3px solid rgba(0,0,0,0);
+    border-bottom: 50px solid rgba(0,0,0,0);
+    padding-top: 10px;
+    width: 255px;
+    height: 255px;
+    margin-bottom: 35px;
+    margin-left:10px;
+}
+
+.colum {
+    column-width: 50px;
+}
+
+.back {
+    background: url(../default/bgDeath.jpg);
+}
+
+.height-25 {
+    height: 25px;
+}
+
+.height-50 {
+    height: 50px;
+}
+
+.height-100 {
+    height: 100px;
+}
+
+.align-bottom-center {
+    bottom: 0;
+    text-align: center;
+}
+
+.max-width {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    word-wrap: break-word;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.text-description {
+    height: auto;
+    width: auto;
+}
+
+.im {
+    margin: 0,3px;
+    float: left;
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: 13px,5px;
+    border-radius: 20%;
+    border: 0;
+}
+
+.chat {
+    float:left;
+    border: solid 2px white;
+    min-height: 100px;
+    width: 800px;
+}
+.chat:active{
+
+}
+
+.imageItemDiv {
+    margin: 10px auto 20px;
+    display: block;
+}
+
+.im-item {
+    width: 400px;
+    height: 400px;
+    border-radius: 15%;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.right {
+    float: right;
+}
+
+span {
+    float: left;
+}
+
+img {
+}

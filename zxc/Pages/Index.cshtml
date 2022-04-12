@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/my.css" />
+</head>
+<body>
+    <div class="atCenter">
+        <div class="divLeft">
+            <p class="height-100"></p>
+            <form method="post" enctype="multipart/form-data">
+                <h3 class="darkRedTextSile">@Model.IncorrectData</h3>
+                <p class="darkRedTextSile">Enter Email</p>
+                <input type="email" name="email" class="darkRedTextSile" />
+                <p class="height-25 darkRedTextSile">Enter Password</p>
+                <input type="password" name="password" class="darkRedTextSile" />
+                <p class="height-25"></p>
+                <input class="darkRedTextSile" type="submit" asp-page-handler="Login" value="Log in" />
+            </form>
+        </div>
+        <div class="divRight">
+            <p class="height-100"></p>
+            <form method="post" enctype="multipart/form-data">
+                <h3 class="darkRedTextSile">@Model.UserWithThisEmailExist</h3>
+                <p class="darkRedTextSile">Enter Email</p>
+                <input type="email" name="emailSign" class="darkRedTextSile" />
+                <p class="darkRedTextSile">Enter Name</p>
+                <input type="text" name="nameSign" class="darkRedTextSile" />
+                <p class="height-25 darkRedTextSile">Enter Password</p>
+                <input type="password" name="passwordSign" class="darkRedTextSile" />
+                <p class="height-25"></p>
+                <input class="darkRedTextSile" type="submit" asp-page-handler="Signin" value="Sign in" />
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
